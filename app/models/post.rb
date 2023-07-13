@@ -5,6 +5,11 @@ class Post < ApplicationRecord
 
   after_save :update_posts
 
+  # validates :title, presence: true
+  # validates :text, length: { maximum: 250 }
+  # validates :posts_counter, presence: true, numericality: {greater_than_or_equal_to: 0}
+  # validates :posts_counter, presence: true, numericality: {greater_than_or_equal_to: 0}
+
   def display_comments
     comments.order(created_at: :desc).limit(5)
   end

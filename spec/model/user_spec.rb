@@ -14,19 +14,16 @@ RSpec.describe User, type: :model do
     it 'post counter should be zero or more' do
         expect(subject.posts_counter).to be_a(Integer)
         expect(subject.posts_counter).to be >=0
+        subject.posts_counter = -1
+        expect(subject).to_not be_valid
     end
 
-    describe '#display_posts' do
     it 'returns the latest 3 posts' do
-      user = User.new(name: 'Henry', photo: 'photo1', bio: 'First photo', posts_counter: 1)
-      user.save!
-      
-      post1 = user.posts.create!(created_at: 3.days.ago)
-      post2 = user.posts.create!(created_at: 2.days.ago)
-      post3 = user.posts.create!(created_at: 1.day.ago)
-      post4 = user.posts.create!(created_at: Time.now)
+      post1 = subject.posts.create!(created_at: 3.days.ago)
+      post2 = subject.posts.create!(created_at: 2.days.ago)
+      post3 = subject.posts.create!(created_at: 1.day.ago)
+      post4 = subject.posts.create!(created_at: Time.now)
 
-      expect(user.display_posts).to eq([post4, post3, post2])
+      expect(subject.display_posts).to eq([post4, post3, post2])
     end
-  end
 end
