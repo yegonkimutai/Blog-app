@@ -31,7 +31,6 @@ RSpec.describe UsersController, type: :request do
       expect(response).to render_template(:show)
     end
 
-
     it 'displays template' do
       get "/users/#{user.id}"
       expect(response.body).to include('Users Available')
