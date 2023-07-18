@@ -1,1 +1,8 @@
-<h1>Users Available</h1>
+<h1><%= @user.name %></h1>
+
+<p>Bio: <%= @user.bio %></p>
+
+<h2>Posts available</h2>
+
+<%= render @user.posts %>
+

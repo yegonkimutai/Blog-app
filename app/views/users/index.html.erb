@@ -1,1 +1,10 @@
 <h1>Users Available</h1>
+
+<ul>
+<% @users.each do |user| %>
+    <li>
+      <%= link_to user.name, user %>
+      No of posts: <%= user.posts.count %>
+    </li>
+    <% end %>
+</ul>
