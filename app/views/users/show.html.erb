@@ -4,5 +4,7 @@
 
 <h2>Posts available</h2>
 
-<%= render @user.posts %>
+<%= render @user.posts.limit(3) %>
+
+<%= link_to "See all posts", user_posts_path(@user) %>
 
