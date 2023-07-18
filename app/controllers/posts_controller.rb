@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     @posts = @user.posts.includes(:author, comments: :author)
   end
 
-  def show 
+  def show
     @post = Post.find(params[:id])
     @user = @post.author
   end
