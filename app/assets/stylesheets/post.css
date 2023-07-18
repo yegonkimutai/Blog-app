@@ -1,30 +1,30 @@
 .post,
 .comments-container {
-    border: 2px solid;
-    margin: 1rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
+  border: 2px solid;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .post p {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .likes-comments {
-    display: flex;
-    align-self: flex-end;
+  display: flex;
+  align-self: flex-end;
 }
 
 .pagination,
 .back-button {
-    padding: 1rem;
-    background-color: #fff;
-    margin: 10px;
+  padding: 1rem;
+  background-color: #fff;
+  margin: 10px;
 }
 
 .pagination:hover,
 .back-button:hover {
-    background-color: aqua;
-    cursor: pointer;
+  background-color: aqua;
+  cursor: pointer;
 }
