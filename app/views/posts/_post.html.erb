@@ -1,14 +1,15 @@
-<p>
+<div class='show-post'>
+<div class='show-post-id'>
   <strong>Post:</strong>
-  <%= post.title %>
-</p>
+  <%= post.id %>
+</div>
 
-<p>
-  <strong>Content:</strong>
+<div class='show-post-content'>
   <%= post.text %>
-</p>
+</div>
 
-<p>
+<div class='show-counter'>
   Comments: <%= post.comments.count %>
   Likes: <%= post.likes.count %>
-</p>
+</div>
+</div>

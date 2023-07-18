@@ -1,10 +1,11 @@
-<h1>Posts Available</h1>
-
-<img src="<%=@user.photo %>"/>
-
-<h2><%= @user.name %></h2>
-
-<h2><%= @user.posts.count %></h2>
+<div class='user-show-container'>
+<div class='show-box'>
+<%= image_tag @user.photo %>
+<div class='profile-box'>
+<div class='prof-name'><%= @user.name %></div>
+<div class='prof-counter'>No of posts: <%= @user.posts.count %></div>
+</div>
+</div>
 
 <% @posts.each do |post| %>
     <%= link_to user_post_path(@user, post.id), class: 'post-item' do %>
@@ -39,7 +40,7 @@
     </button>
   <% end %>
 
-  <button class="back-all-users">
+  <button class="back-button">
     <%= link_to "Back to all users", root_path %>
   </button>
 </div>

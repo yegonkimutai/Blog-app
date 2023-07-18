@@ -1,10 +1,22 @@
-<h1><%= @user.name %></h1>
+<div class='user-show-container'>
+<div class='show-box'>
+<%= image_tag @user.photo %>
+<div class='profile-box'>
+<div class='prof-name'><%= @user.name %></div>
+<div class='prof-counter'>No of posts: <%= @user.posts.count %></div>
+</div>
+</div>
 
-<p>Bio: <%= @user.bio %></p>
-
-<h2>Posts available</h2>
+<div class='bio'>Bio<br>
+ <%= @user.bio %>
+ </div>
 
 <%= render @user.posts.limit(3) %>
 
+<div class='prof-button'>
 <%= link_to "See all posts", user_posts_path(@user) %>
+</div>
+</div>
+
+<div></div>
 
