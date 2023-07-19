@@ -1,1 +1,38 @@
-<h1>Users Available</h1>
+<div class='user-show-container'>
+<div class='show-box'>
+<%= image_tag @user.photo %>
+<div class='profile-box'>
+<div class='prof-name'><%= @user.name %></div>
+<div class='prof-counter'>No of posts: <%= @user.posts.count %></div>
+</div>
+</div>
+
+<div class='bio'>Bio<br>
+ <%= @user.bio %>
+ </div>
+
+<% @user.display_posts.each do |post| %>
+    <div class='show-post'>
+<div class='show-post-id'>
+  <strong>Post:</strong>
+  <%= post.id %>
+</div>
+
+<div class='show-post-content'>
+  <%= post.text %>
+</div>
+
+<div class='show-counter'>
+  Comments: <%= post.comments.count %>
+  Likes: <%= post.likes.count %>
+</div>
+</div>
+<% end %>
+
+<div class='prof-button'>
+<%= link_to "See all posts", user_posts_path(@user) %>
+</div>
+</div>
+
+<div></div>
+

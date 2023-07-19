@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+.main-container {
+  width: 70%;
+  margin: auto;
+}
+
+.user-list {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin: 2rem;
+}
+
+.photo {
+  height: 100px;
+  width: 100px;
+  border: 1px solid;
+}
+
+.user-box {
+  border: 2px solid;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.counter {
+  display: flex;
+  align-self: flex-end;
+}
+
+.user-show-container {
+  margin: 2rem;
+}
+
+.show-box {
+  display: flex;
+}
+
+.show-box img {
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
+}
+
+.profile-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  border: 2px solid;
+  margin: 1rem;
+}
+
+.prof-name {
+  font-size: 2.5rem;
+}
+
+.prof-counter {
+  display: flex;
+  align-self: flex-end;
+}
+
+.bio {
+  display: flex;
+  margin: 1rem;
+  border: 2px solid;
+  width: 95%;
+  padding: 1rem;
+  height: 10%;
+  gap: 1rem;
+}
+
+.show-post {
+  border: 2px solid;
+  margin: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.show-post-content {
+  margin: 0.5rem;
+}
+
+.show-counter {
+  display: flex;
+  align-self: flex-end;
+}
+
+.prof-button {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.prof-button:hover {
+  cursor: pointer;
+}

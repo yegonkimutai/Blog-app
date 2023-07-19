@@ -1,1 +1,13 @@
-<h1>Users Available</h1>
+<div class='main-container'>
+<ul>
+<% @users.each do |user| %>
+    <li class='user-list'>
+    <div class="photo"><%= image_tag user.photo %></div>
+    <div class='user-box'>
+    <div class='name'><%= link_to user.name, user %></div>
+    <div class='counter'>No of posts: <%= user.posts.count %></div>
+    </div>
+    </li>
+    <% end %>
+</ul>
+</div>

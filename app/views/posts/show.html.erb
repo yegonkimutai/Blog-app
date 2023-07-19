@@ -1,1 +1,27 @@
-<h1>Posts Available</h1>
+<div class="comments-details">
+  <div class="comments-container">
+    <div class="posts-title">
+      <h2>Post   <%= @post.id %> by <%= @user.name %></h2>
+      </div>
+    <div class="likes-comments">
+      <span class="comments">Comments: <%= @post.comments_counter %>, </span>
+      <span class="likes">Likes: <%= @post.likes_counter %></span>
+    </div>
+    <p><%= @post.text %></p>
+    </div>
+  </div>
+
+  <div class="comments-container">
+    <% @comments = Post.find(@post.id).comments %>
+      <% @comments.includes(:author).each do |comment| %>
+        <div>
+          <span><%= comment.author.name %> : <%= comment.text %></span>
+        </div>
+      <% end %>
+  </div>
+  <div>
+  <button class='back-button'>
+      <%= link_to "Back to all users", root_path %>
+    </button>
+    </div>
+</div>

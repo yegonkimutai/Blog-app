@@ -1,1 +1,46 @@
-<h1>Posts Available</h1>
+<div class='user-show-container'>
+<div class='show-box'>
+<%= image_tag @user.photo %>
+<div class='profile-box'>
+<div class='prof-name'><%= @user.name %></div>
+<div class='prof-counter'>No of posts: <%= @user.posts.count %></div>
+</div>
+</div>
+
+<% @posts.each do |post| %>
+    <%= link_to user_post_path(@user, post.id), class: 'post-item' do %>
+      <div class="post">
+        <div>
+          <h3><%= post.title %></h3>
+          <p><%= post.text.split(" ")[0..80].join(" ") %></p>
+        </div>
+        <div class="likes-comments">
+          <span class="comments">Comments:
+            <%= post.comments_counter %>,
+          </span>
+          <span class="likes">Likes:
+            <%= post.likes_counter %></span>
+        </div>
+      </div>
+      <div class="comments-container">
+        <% post.display_comments.each do |comment| %>
+          <div class="comment">
+            <span><%= comment.author.name %>:</span>
+            <span><%= comment.text %></span>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <div class="buttons">
+  <% if @posts.present? %>
+    <button class="pagination">
+      <%= link_to "Pagination", user_post_path(@user, @posts.first) %>
+    </button>
+  <% end %>
+
+  <button class="back-button">
+    <%= link_to "Back to all users", root_path %>
+  </button>
+</div>
