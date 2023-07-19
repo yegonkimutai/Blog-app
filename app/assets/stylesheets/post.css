@@ -16,15 +16,49 @@
   align-self: flex-end;
 }
 
+.like_btn {
+  margin: 0.5rem;
+  padding: 0.3rem;
+  background-color: #fff;
+}
+
+.main-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.post_title {
+  width: 20%;
+  height: 2rem;
+  margin: 5px;
+}
+
+.post_text {
+  width: 30%;
+  height: 5rem;
+  margin: 5px;
+}
+
+.post_btn {
+  width: 10%;
+  padding: 0.5rem;
+  background-color: #fff;
+  margin: 5px;
+}
+
 .pagination,
-.back-button {
+.back-button,
+.create-button {
   padding: 1rem;
   background-color: #fff;
   margin: 10px;
 }
 
 .pagination:hover,
-.back-button:hover {
+.back-button:hover,
+.create-button:hover,
+.like_btn:hover {
   background-color: aqua;
   cursor: pointer;
 }
