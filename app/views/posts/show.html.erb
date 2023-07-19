@@ -20,6 +20,9 @@
       <% end %>
   </div>
 
+  <%= form_with url: "/users/#{@post.author.id}/posts/#{@post.id}/likes" do |form| %>
+    <%= form.submit 'Like', class: 'like_button' %>
+    <% end %>
   <%= link_to "Add a comment", new_user_post_comment_path(@post.author, @post) %>
 
   <div>

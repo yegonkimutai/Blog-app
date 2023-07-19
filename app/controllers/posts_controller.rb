@@ -8,8 +8,6 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @user = @post.author
-    @comment = Comment.new
-    @comments = @post.comments
   end
 
   def new
@@ -20,7 +18,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @user = User.find(params[:user_id])
-    @post.author = @user
+    @post.author = current_user
 
     if @post.save
       redirect_to user_post_url(@user, @post), notice: 'Post was successfully created.'
