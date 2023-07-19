@@ -17,14 +17,16 @@
 }
 
 .pagination,
-.back-button {
+.back-button,
+.create-button {
   padding: 1rem;
   background-color: #fff;
   margin: 10px;
 }
 
 .pagination:hover,
-.back-button:hover {
+.back-button:hover,
+.create-button:hover {
   background-color: aqua;
   cursor: pointer;
 }
