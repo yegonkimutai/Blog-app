@@ -11,7 +11,23 @@
  <%= @user.bio %>
  </div>
 
-<%= render @user.posts.limit(3) %>
+<% @user.display_posts.each do |post| %>
+    <div class='show-post'>
+<div class='show-post-id'>
+  <strong>Post:</strong>
+  <%= post.id %>
+</div>
+
+<div class='show-post-content'>
+  <%= post.text %>
+</div>
+
+<div class='show-counter'>
+  Comments: <%= post.comments.count %>
+  Likes: <%= post.likes.count %>
+</div>
+</div>
+<% end %>
 
 <div class='prof-button'>
 <%= link_to "See all posts", user_posts_path(@user) %>

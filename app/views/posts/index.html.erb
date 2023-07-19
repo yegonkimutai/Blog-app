@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="comments-container">
-        <% post.comments.limit(5).each do |comment| %>
+        <% post.display_comments.each do |comment| %>
           <div class="comment">
             <span><%= comment.author.name %>:</span>
             <span><%= comment.text %></span>
