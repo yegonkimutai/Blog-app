@@ -19,6 +19,9 @@
         </div>
       <% end %>
   </div>
+
+  <%= link_to "Add a comment", new_user_post_comment_path(@post.author, @post) %>
+
   <div>
   <button class='back-button'>
       <%= link_to "Back to all users", root_path %>
