@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.feature 'User show page' do
   before do
     @user = User.create(name: 'user1', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Bio 1')
