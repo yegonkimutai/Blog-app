@@ -17,7 +17,7 @@ RSpec.describe PostsController, type: :request do
 
     it 'returns successful response' do
       get user_posts_path(user)
-      expect(response.body).to include('Posts Available')
+      expect(response.body).to include('Tom')
     end
   end
 
@@ -37,7 +37,7 @@ RSpec.describe PostsController, type: :request do
 
     it 'returns successful response' do
       get user_post_path(user, post)
-      expect(response.body).to include('Posts Available')
+      expect(response.body).to include('Trevor')
     end
   end
 end
