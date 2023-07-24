@@ -61,4 +61,3 @@ RSpec.feature 'User show page' do
     expect(page).to have_link('See all posts', href: user_posts_path(@user))
   end
 end
-
