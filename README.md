@@ -19,7 +19,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Blog App <a name="about-project"></a>
+# 📖 Blog <a name="about-project"></a>
 
 - This is a ruby on rails project
 
