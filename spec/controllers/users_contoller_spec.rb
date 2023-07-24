@@ -14,7 +14,7 @@ RSpec.describe UsersController, type: :request do
 
     it 'displays template' do
       get users_path
-      expect(response.body).to include('Users Available')
+      expect(response.body).to include('Blog')
     end
   end
 
@@ -33,7 +33,7 @@ RSpec.describe UsersController, type: :request do
 
     it 'displays template' do
       get "/users/#{user.id}"
-      expect(response.body).to include('Users Available')
+      expect(response.body).to include('Tom')
     end
   end
 end
