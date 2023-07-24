@@ -104,6 +104,12 @@ rubocop -A
 - Twitter: [@yegonbrian8](https://twitter.com/coder_rida)
 - LinkedIn: [brian-yegon](https://www.linkedin.com/in/brian-yegon-0717a1241/)
 
+👤 **Author: Damilare**
+
+- GitHub: [@githubhandle](https://github.com/Bestbynature)
+- Twitter: [@twitterhandle](https://twitter.com/Dammybest)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/damilareismailabestbynature/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
