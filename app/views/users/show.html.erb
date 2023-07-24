@@ -13,6 +13,7 @@
 
 <% @user.display_posts.each do |post| %>
     <div class='show-post'>
+<%= link_to user_post_path(@user, post.id) do %>
 <div class='show-post-id'>
   <strong>Post:</strong>
   <%= post.id %>
@@ -27,6 +28,7 @@
   Likes: <%= post.likes.count %>
 </div>
 </div>
+<%end%>
 <% end %>
 
 <div class='prof-button'>
