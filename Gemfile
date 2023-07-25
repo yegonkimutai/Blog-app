@@ -74,4 +74,4 @@ end
 
 gem 'rails-controller-testing'
 
-gem "devise", "~> 4.9"
+gem 'devise', '~> 4.9'
