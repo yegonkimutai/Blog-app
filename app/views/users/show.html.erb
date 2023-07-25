@@ -1,6 +1,6 @@
 <div class='user-show-container'>
 <div class='show-box'>
-<%= image_tag @user.photo %>
+<%= image_tag @user.photo.present? ? @user.photo : 'default.jpg' %>
 <div class='profile-box'>
 <div class='prof-name'><%= @user.name %></div>
 <div class='prof-counter'>No of posts: <%= @user.posts.count %></div>
