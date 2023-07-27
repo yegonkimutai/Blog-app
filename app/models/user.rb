@@ -14,7 +14,7 @@ class User < ApplicationRecord
     posts.order(created_at: :desc).limit(3)
   end
 
-  Roles = [:admin, :default]
+  ROLES = %i[admin default].freeze
 
   def admin?
     role == 'admin'
