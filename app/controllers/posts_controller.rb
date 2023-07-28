@@ -35,6 +35,14 @@ class PostsController < ApplicationController
     authorize! :edit, @post # Ensure user is allowed to edit this post
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @user = @post.author
+    @post.destroy
+
+    redirect_to user_posts_path(@user)
+  end
+
   private
 
   def post_params

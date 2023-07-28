@@ -8,17 +8,12 @@ class Ability
     if user.admin?
       can :manage, :all
     else
-      can :read, Post
-      can :create, Post
-
-      can %i[update destroy], Post, user_id: user.id
+      can :read, :all
+      can :create, [Post, Comment, Like]
+      
+      can %i[update destroy], Post, author_id: user.id
+      can %i[update destroy], Comment, author_id: user.id
     end
-
-    # Define abilities
-    can :manage, Post, user_id: user.id # Post creator can manage (edit, delete) their own posts
-
-    can :like, Post
-    can :create, Comment
     # The first argument to `can` is the action you are giving the user
     # permission to do.
     # If you pass :manage it will apply to every action. Other common actions
