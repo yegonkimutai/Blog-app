@@ -6,6 +6,11 @@
     <div class="likes-comments">
       <span class="comments">Comments: <%= @post.comments_counter %>, </span>
       <span class="likes">Likes: <%= @post.likes_counter %></span>
+      <!-- app/views/posts/show.html.erb -->
+    <% if can? :destroy, @post %>
+      <%= button_to "Delete", user_post_path(@post), method: :delete, data: { confirm: "Are you sure you want to delete this post?" } %>
+    <% end %>
+
     </div>
     <p><%= @post.text %></p>
     </div>
@@ -17,6 +22,9 @@
         <div>
           <span><%= comment.author.name %> : <%= comment.text %></span>
         </div>
+        <% if can? :destroy, comment %>
+          <%= link_to "Delete", user_post_comment_path(@post.author, @post, comment), method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
       <% end %>
   </div>
  

@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
+    json_response(@posts)
   end
 
   def show
@@ -33,6 +34,14 @@ class PostsController < ApplicationController
 
   def edit
     authorize! :edit, @post # Ensure user is allowed to edit this post
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @user = @post.author
+    @post.destroy
+
+    redirect_to user_posts_path(@user)
   end
 
   private
